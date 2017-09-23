@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="app">
         <h1>Conway's Game of Life</h1>
-        <Grid cells={ [true, false, true, false, true, true] } />
+        <Grid />
       </div>
     )
   }
