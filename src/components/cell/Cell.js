@@ -17,4 +17,8 @@ class Cell extends Component {
   }
 }
 
+Cell.propTypes = {
+  alive: React.PropTypes.bool.isRequired
+}
+
 export default Cell
