@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Cell from './components/cell/Cell'
+import Grid from './components/grid/Grid'
 import './App.css'
 
 /** The root component of our application. */
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="app">
         <h1>Conway's Game of Life</h1>
-        <Cell alive={true}/>
+        <Grid cells={ [true, false, true, false, true, true] } />
       </div>
     )
   }

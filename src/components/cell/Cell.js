@@ -11,7 +11,7 @@ class Cell extends Component {
 
   render() {
     return (
-      <div className="cell" style={this.style}>
+      <div className="cell" style={ this.style }>
       </div>
     )
   }
