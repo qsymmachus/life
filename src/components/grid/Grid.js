@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Cell from '../cell/Cell'
+import { generateRandomCells } from '../../domain/Cell'
 
 /**
  * Grid of up to 100 x 100 cells.
@@ -15,20 +16,8 @@ import Cell from '../cell/Cell'
 class Grid extends Component {
   get cells() {
     return this.props.cells == null
-      ? this.generateRandomCells()
+      ? generateRandomCells()
       : this.props.cells
-  }
-
-  generateRandomCells() {
-    return [...Array(100).keys()].map(row => 
-      [...Array(100).keys()].map(state =>
-        this.randomBoolean()
-      )
-    )
-  }
-
-  randomBoolean() {
-    return Math.random() >= 0.5;
   }
 
   renderCells() {
