@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import Cell from '../cell/Cell'
 import { generateRandomCells } from '../../domain/Cell'
 
@@ -36,8 +37,8 @@ class Grid extends Component {
 }
 
 Grid.propTypes = {
-  cells: React.PropTypes.arrayOf(
-    React.PropTypes.arrayOf(React.PropTypes.bool)
+  cells: PropTypes.arrayOf(
+    PropTypes.arrayOf(PropTypes.bool)
   )
 }
 

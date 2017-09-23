@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import './Cell.css'
 
 /** A cell in the game of life. A cell can either be alive or dead. */
@@ -18,7 +19,7 @@ class Cell extends Component {
 }
 
 Cell.propTypes = {
-  alive: React.PropTypes.bool.isRequired
+  alive: PropTypes.bool.isRequired
 }
 
 export default Cell
