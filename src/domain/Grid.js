@@ -14,9 +14,9 @@ class Grid {
 /** Generates a Grid with a random initial state. */
 Grid.generate = function() {
   return new Grid(
-    range(100).map(row => 
-      range(100).map(state =>
-        Cell.generate()
+    range(100).map(y => 
+      range(100).map(x =>
+        Cell.generate(x, y)
       )
     )
   )
