@@ -11,10 +11,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "mocha",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.6.0",
     "chai": "^4.1.2",
     "mocha": "^3.5.3"
   }
