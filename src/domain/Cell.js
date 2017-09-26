@@ -1,20 +1,20 @@
+import Position from './Position'
+
 /** 
  * Represents a Cell in the game of life. 
  * 
- * A cell can either be alive or dead. A cell has a position
- * determined by `x` and `y` coordinates.
+ * A cell can either be alive or dead. A cell has a position on the game grid.
  */
 class Cell {
-  constructor(isAlive, x = 0, y = 0) {
+  constructor(isAlive, position = new Position(0, 0)) {
     this.isAlive = isAlive
-    this.x = x
-    this.y = y
+    this.position = position
   }
 }
 
 /** Generates a Cell with a random initial state. */
-Cell.generate = function(x = 0, y = 0) {
-  return new Cell(randomBoolean(), x, y)
+Cell.generate = function(position = new Position(0, 0)) {
+  return new Cell(randomBoolean(), position)
 }
 
 /** Helper function that returns a randomly generated boolean. */

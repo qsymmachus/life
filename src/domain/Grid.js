@@ -1,4 +1,5 @@
 import Cell from './Cell'
+import Position from './Position'
 
 /** 
  * Represents a grid of cells in the game of life. 
@@ -16,7 +17,7 @@ Grid.generate = function() {
   return new Grid(
     range(100).map(y => 
       range(100).map(x =>
-        Cell.generate(x, y)
+        Cell.generate(new Position(x, y))
       )
     )
   )
