@@ -13,10 +13,10 @@ class Grid {
 }
 
 /** Generates a Grid with a random initial state. */
-Grid.generate = function() {
+Grid.generate = function(width = 100, height = 100) {
   return new Grid(
-    range(100).map(y => 
-      range(100).map(x =>
+    range(height).map(y => 
+      range(width).map(x =>
         Cell.generate(new Position(x, y))
       )
     )
