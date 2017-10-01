@@ -1,5 +1,6 @@
 import { expect } from 'chai'
 import Grid from '../../src/domain/Grid'
+import Position from '../../src/domain/Position'
 
 describe("Grid", () =>
   describe("generate", () =>
@@ -12,6 +13,27 @@ describe("Grid", () =>
       grid.cells.map(row =>
         expect(row).to.have.lengthOf(size)
       )
+    })
+  ),
+
+  describe("getCell", () =>
+    it("should return an Option containing a well if a cell is found", function () {
+      let size = 5
+      let grid = Grid.generate(size, size)
+      let option = grid.getCell(new Position(1, 1))
+      let cell = option.get()
+
+      expect(option.isDefined()).to.be.true
+      expect(cell.position.x).to.equal(1)
+      expect(cell.position.y).to.equal(1)
+    }),
+
+    it("should return a None if no cell is found", function() {
+      let size = 5
+      let grid = Grid.generate(size, size)
+      let option = grid.getCell(new Position(10, 10))
+
+      expect(option.isEmpty()).to.be.true
     })
   )
 )

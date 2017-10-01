@@ -1,5 +1,6 @@
 import Cell from './Cell'
 import Position from './Position'
+import { Option, None } from 'option-monad'
 
 /** 
  * Represents a grid of cells in the game of life. 
@@ -9,6 +10,19 @@ import Position from './Position'
 class Grid {
   constructor(cells) {
     this.cells = cells
+  }
+
+  /** 
+   * Returns the Cell at a given position.
+   * 
+   * Since no cell may be found, the result is wrapped in an Option.
+   */
+  getCell(position) {
+    try {
+      return Option(this.cells[position.y][position.x])
+    } catch(e) {
+      return None.create()
+    }
   }
 }
 
