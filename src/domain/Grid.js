@@ -24,6 +24,27 @@ class Grid {
       return None.create()
     }
   }
+
+  /**
+   * Returns the neighbors of a given Cell on the grid.
+   */
+  getNeighbors(cell) {
+    let neighboringPositions = [
+      new Position(cell.position.x - 1, cell.position.y - 1),
+      new Position(cell.position.x - 1, cell.position.y),
+      new Position(cell.position.x - 1, cell.position.y + 1),
+      new Position(cell.position.x, cell.position.y - 1),
+      new Position(cell.position.x, cell.position.y + 1),
+      new Position(cell.position.x + 1, cell.position.y - 1),
+      new Position(cell.position.x + 1, cell.position.y),
+      new Position(cell.position.x + 1, cell.position.y + 1)
+    ]
+
+    return neighboringPositions
+      .map((position) => this.getCell(position))
+      .filter((optionalCell) => optionalCell.isDefined())
+      .map((optionalCell) => optionalCell.get())
+  }
 }
 
 /** Generates a Grid with a random initial state. */

@@ -35,5 +35,31 @@ describe("Grid", () =>
 
       expect(option.isEmpty()).to.be.true
     })
+  ),
+
+  describe("getNeighbors", () =>
+    it("should return the neighbors of a cell", function() {
+      let grid = Grid.generate(3, 3)
+      let cell = grid.getCell(new Position(1, 1)).get()
+      let neighbors = grid.getNeighbors(cell)
+
+      expect(neighbors).to.have.lengthOf(8)
+    }),
+
+    it("should return the neighbors of a cell on the edge of the grid", function() {
+      let grid = Grid.generate(3, 3)
+      let cell = grid.getCell(new Position(1, 0)).get()
+      let neighbors = grid.getNeighbors(cell)
+
+      expect(neighbors).to.have.lengthOf(5)
+    }),
+
+    it("should return the neighbors of a cell on the corner of the grid", function() {
+      let grid = Grid.generate(3, 3)
+      let cell = grid.getCell(new Position(0, 0)).get()
+      let neighbors = grid.getNeighbors(cell)
+
+      expect(neighbors).to.have.lengthOf(3)
+    })
   )
 )
