@@ -1,6 +1,7 @@
 import Cell from './Cell'
 import Position from './Position'
 import { Option, None } from 'option-monad'
+import { range } from './helpers/Range'
 
 /** 
  * Represents a grid of cells in the game of life. 
@@ -56,11 +57,6 @@ Grid.generate = function(width = 100, height = 100) {
       )
     )
   )
-}
-
-/** Helper function that generates an array of [0..n-1] elements. */
-function range(n) {
-  return [...Array(n).keys()]
 }
 
 export default Grid
