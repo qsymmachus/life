@@ -1,4 +1,5 @@
 import Position from './Position'
+import { randomBoolean } from './helpers/Random'
 
 /** 
  * Represents a Cell in the game of life. 
@@ -15,11 +16,6 @@ class Cell {
 /** Generates a Cell with a random initial state. */
 Cell.generate = function(position = new Position(0, 0)) {
   return new Cell(randomBoolean(), position)
-}
-
-/** Helper function that returns a randomly generated boolean. */
-function randomBoolean() {
-  return Math.random() >= 0.5;
 }
 
 export default Cell
