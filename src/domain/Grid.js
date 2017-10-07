@@ -32,12 +32,12 @@ class Grid {
   getNeighbors(cell) {
     let neighboringPositions = [
       new Position(cell.position.x - 1, cell.position.y - 1),
-      new Position(cell.position.x - 1, cell.position.y),
-      new Position(cell.position.x - 1, cell.position.y + 1),
       new Position(cell.position.x, cell.position.y - 1),
-      new Position(cell.position.x, cell.position.y + 1),
       new Position(cell.position.x + 1, cell.position.y - 1),
+      new Position(cell.position.x - 1, cell.position.y),
       new Position(cell.position.x + 1, cell.position.y),
+      new Position(cell.position.x - 1, cell.position.y + 1),
+      new Position(cell.position.x, cell.position.y + 1),
       new Position(cell.position.x + 1, cell.position.y + 1)
     ]
 
