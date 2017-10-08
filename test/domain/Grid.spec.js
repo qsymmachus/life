@@ -16,6 +16,25 @@ describe("Grid", () =>
     })
   ),
 
+  describe("generateFromBooleans", () =>
+    it("should return a Grid with cells whose 'isAlive' state is determined by the booleans", function() {
+      let bools = [
+        [true, false, true],
+        [false, true, false],
+        [true, true, true]
+      ]
+      let grid = Grid.generateFromBooleans(bools)
+      
+      expect(grid).to.have.property('cells').with.lengthOf(bools.length)
+
+      grid.cells.map((row, y) =>
+        row.map((cell, x) =>
+          expect(cell.isAlive).to.equal(bools[y][x])
+        )
+      )
+    })
+  ),
+
   describe("getCell", () =>
     it("should return an Option containing a well if a cell is found", function () {
       let size = 5

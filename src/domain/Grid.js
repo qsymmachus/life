@@ -59,4 +59,20 @@ Grid.generate = function(width = 100, height = 100) {
   )
 }
 
+/** 
+ * Generates a Grid from a two-dimensional array of booleans.
+ * 
+ * The booleans determine whether each generated Cell is alive.
+ * The position coordinates are filled in automatically.
+ */
+Grid.generateFromBooleans = function(booleans) {
+  return new Grid(
+    booleans.map((row, y) =>
+      row.map((boolean, x) =>
+        new Cell(boolean, new Position(x, y))
+      )
+    )
+  )
+}
+
 export default Grid
