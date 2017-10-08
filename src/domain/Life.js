@@ -19,13 +19,13 @@ let Life = {
     if (cell.isAlive) {
       if (livingNeighbors.length < 2) {
         return false
-      } else if (livingNeighbors.length == 2 || livingNeighbors.length == 3) {
+      } else if (livingNeighbors.length === 2 || livingNeighbors.length === 3) {
         return true
       } else if (livingNeighbors.length > 3) {
         return false
       }
     } else {
-      if (livingNeighbors.length == 3) {
+      if (livingNeighbors.length === 3) {
         return true
       } else {
         return false
