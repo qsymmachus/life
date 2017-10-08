@@ -1,3 +1,6 @@
+import Cell from './Cell'
+import Grid from './Grid'
+
 let Life = {
   /**
    * Enforces the basic rules of Conway's Game of Life.
@@ -28,6 +31,24 @@ let Life = {
         return false
       }
     }
+  },
+
+  /**
+   * Applies the rules of Conway's Game of Life to every cell in a grid, returning a
+   * new grid with updated state.
+   * 
+   * Each time this function is called, it is called a "generation" or a
+   * "tick".
+   */
+  tick: function(prevGrid) {
+    return new Grid(prevGrid.cells.map(row =>
+      row.map(cell =>
+        new Cell(
+          this.willLive(cell, prevGrid.getNeighbors(cell)),
+          cell.position
+        )
+      )
+    ))
   }
 }
 
