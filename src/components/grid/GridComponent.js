@@ -12,14 +12,8 @@ import Grid from '../../domain/Grid'
  * randomly generated initial state.
  */
 class GridComponent extends Component {
-  get grid() {
-    return this.props.grid == null
-      ? Grid.generate()
-      : this.props.grid
-  }
-
   renderCells() {
-    return this.grid.cells.map(row => 
+    return this.props.grid.cells.map(row => 
       row.map(cell => <CellComponent cell={ cell }/>)
     )
   }
