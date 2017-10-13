@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'redux-zero'
 
-import GridComponent from '../../components/Grid'
+import GridComponent from '../components/grid/GridComponent'
 
 const mapStateToProps = ({ grid }) => ({ grid })
 
