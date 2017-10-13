@@ -1,5 +1,4 @@
 import store from '../store/Store'
-import Grid from '../domain/Grid'
 import Life from '../domain/Life'
 
 /**
@@ -10,6 +9,6 @@ import Life from '../domain/Life'
  */
 export function tick() {
   store.setState({
-    grid: Life.tick(store.getState.grid())
+    grid: Life.tick(store.getState().grid)
   })
 }
