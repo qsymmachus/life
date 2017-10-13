@@ -1,6 +1,6 @@
 import Cell from './Cell'
 import Position from './Position'
-import { Option, None } from 'option-monad'
+import { Option } from 'giftbox'
 import { range } from './helpers/Range'
 
 /** 
@@ -22,7 +22,7 @@ class Grid {
     try {
       return Option(this.cells[position.y][position.x])
     } catch(e) {
-      return None.create()
+      return Option(undefined)
     }
   }
 

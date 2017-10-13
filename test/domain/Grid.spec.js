@@ -52,7 +52,7 @@ describe("Grid", () =>
       let grid = Grid.generate(size, size)
       let option = grid.getCell(new Position(10, 10))
 
-      expect(option.isEmpty()).to.be.true
+      expect(option.isDefined()).to.be.false
     })
   ),
 
