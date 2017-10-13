@@ -44,8 +44,7 @@ yarn start
 Project Structure
 -----------------
 
-All source code is located under `src`. I've tried to maintain a clear separation between the domain of the game of life, which is written in ordinary Javascript, from the view and state management layers, which are written using [React](https://github.com/facebook/react) and
-[Redux Zero](https://github.com/concretesolutions/redux-zero/blob/master/README.md) respectively.
+All source code is located under `src`. I've tried to clearly separate between the __domain__ of the game of life (which is written in ordinary Javascript) from the __view__ and __state__ management layers (which are written using [React](https://github.com/facebook/react) and [Redux Zero](https://github.com/concretesolutions/redux-zero/blob/master/README.md) respectively).
 
 Here's a simplified overview of the organization of `src`:
 
