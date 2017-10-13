@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import CellComponent from '../cell/CellComponent'
-import Grid from '../../domain/Grid'
 
 /**
  * Renders a grid of up to 100 x 100 cells.
@@ -20,7 +19,7 @@ class GridComponent extends Component {
 
   render() {
     return (
-      <div className="grid">
+      <div className="grid" onClick={this.props.handleClick}>
         { this.renderCells() }
       </div>
     )
@@ -30,7 +29,8 @@ class GridComponent extends Component {
 GridComponent.propTypes = {
   grid: PropTypes.arrayOf(
     PropTypes.shape({ isAlive: PropTypes.bool })
-  )
+  ),
+  handleClick: PropTypes.func
 }
 
 export default GridComponent
