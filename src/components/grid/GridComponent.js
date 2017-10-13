@@ -19,7 +19,7 @@ class GridComponent extends Component {
 
   render() {
     return (
-      <div className="grid" onClick={this.props.handleClick}>
+      <div className="grid">
         { this.renderCells() }
       </div>
     )
@@ -31,8 +31,7 @@ GridComponent.propTypes = {
     cells: PropTypes.arrayOf(
       PropTypes.shape({ isAlive: PropTypes.bool })
     )
-  })),
-  handleClick: PropTypes.func
+  }))
 }
 
 export default GridComponent
