@@ -10,7 +10,7 @@ import './App.css'
 class App extends Component {
   componentWillMount() {
     /** Automatically 'tick' the Game of Life every second once the App renders. */
-    setInterval(tick, 1000)
+    setInterval(tick, 500)
   }
 
   render() {
