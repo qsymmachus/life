@@ -27,9 +27,11 @@ class GridComponent extends Component {
 }
 
 GridComponent.propTypes = {
-  grid: PropTypes.arrayOf(
-    PropTypes.shape({ isAlive: PropTypes.bool })
-  ),
+  grid: PropTypes.objectOf(PropTypes.shape({
+    cells: PropTypes.arrayOf(
+      PropTypes.shape({ isAlive: PropTypes.bool })
+    )
+  })),
   handleClick: PropTypes.func
 }
 
