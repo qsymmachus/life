@@ -5,11 +5,11 @@ import Life from '../domain/Life'
 /**
  * Redux action to update the application state.
  * 
- * Given an array of cells, applies the rules of Conway's Game of Life to generate the next
- * generation or 'tick' of cells, and updates the application state with these new cells.
+ * Given the Grid in application state, applies the rules of Conway's Game of Life to generate the next
+ * generation or 'tick' of the grid., and updates the application state with this new grid.
  */
-export function tick(prevCells) {
+export function tick() {
   store.setState({
-    cells: Life.tick(new Grid(prevCells)).cells
+    grid: Life.tick(store.getState.grid())
   })
 }
