@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+
 import CellComponent from '../cell/CellComponent'
 import Grid from '../../domain/Grid'
 
