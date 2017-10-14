@@ -2,6 +2,7 @@
   "name": "life",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://olmsted.io/life",
   "dependencies": {
     "giftbox": "^0.5.1",
     "prop-types": "^15.5.10",
