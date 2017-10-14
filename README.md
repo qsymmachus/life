@@ -20,7 +20,7 @@ An implementation of Conway's Game of Life using React and Redux Zero.
 Usage
 -----
 
-This project uses [Yarn\(https://github.com/yarnpkg/yarn) to manage its dependencies and run common tasks. You'll have to 
+This project uses [Yarn](https://github.com/yarnpkg/yarn) to manage its dependencies and run common tasks. You'll have to 
 [install Yarn](https://yarnpkg.com/en/docs/install) to run any of these commands.
 
 To install all dependencies:
@@ -35,7 +35,7 @@ To run all unit tests:
 yarn test
 ```
 
-To spin up a development server at [http://localhost:3000](http://localhost:3000) and play the game of life! :
+To spin up a development server at [http://localhost:3000](http://localhost:3000) and play the game of life!
 
 ```
 yarn start
@@ -61,4 +61,4 @@ src
 └── store          # Sets up the initial application state.
 ```
 
-Unit tests for source code is located under `test`.
+Unit tests for source code are located under `test`.
