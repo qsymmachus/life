@@ -3,6 +3,8 @@ Life
 
 An implementation of Conway's Game of Life using React and Redux Zero.
 
+<img src="https://olmsted.io/images/life.gif">
+
 > The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
 > The "game" is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input.
 >
