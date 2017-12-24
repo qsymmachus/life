@@ -14,8 +14,8 @@ class Cell {
 }
 
 /** Generates a Cell with a random initial state. */
-Cell.generate = function(position = new Position(0, 0)) {
-  return new Cell(randomBoolean(), position)
+Cell.generate = function(position = new Position(0, 0), likelihoodAlive = 50) {
+  return new Cell(randomBoolean(likelihoodAlive), position)
 }
 
 export default Cell

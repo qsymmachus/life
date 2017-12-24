@@ -48,12 +48,17 @@ class Grid {
   }
 }
 
-/** Generates a Grid with a random initial state. */
-Grid.generate = function(width = 100, height = 100) {
+/** Generates a Grid with a random initial state. 
+ * 
+ * The optional 'density' parameter determines the what proportion
+ * of cells are likely to be alive. Defaults to 50. Higher density
+ * means more live cells, a lower density means fewer live cells.
+ */
+Grid.generate = function(width = 100, height = 100, density = 50) {
   return new Grid(
     range(height).map(y => 
       range(width).map(x =>
-        Cell.generate(new Position(x, y))
+        Cell.generate(new Position(x, y), density)
       )
     )
   )
