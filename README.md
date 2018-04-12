@@ -3,7 +3,7 @@ Life
 
 An implementation of Conway's Game of Life using React and Redux Zero.
 
-[https://olmsted.io/life](https://olmsted.io/life)
+See it live at [https://olmsted.io/life](https://olmsted.io/life)
 
 <img src="https://olmsted.io/images/life.gif">
 
@@ -52,6 +52,16 @@ yarn build
 ```
 
 The static site is dumped into `/build`, which is not tracked in version control.
+
+Playing the Game of Life
+------------------------
+
+The Game of Life is a "zero player game" – once the initial state of the grid is set, the game "plays" itself. However, we can change the initial state of the grid to prompt some interesting behaviors. 
+
+By default, the initial state of the grid is randomized. You can switch to a specific pattern by pressing the following keys:
+
+* Press `g`: switches to a [Gosper Glider Gun](http://www.conwaylife.com/w/index.php?title=Gosper_glider_gun).
+* Press `r`: randomizes the state of the grid.
 
 Project Structure
 -----------------
