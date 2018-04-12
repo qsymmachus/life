@@ -45,6 +45,14 @@ To spin up a development server at [http://localhost:3000](http://localhost:3000
 yarn start
 ```
 
+To create a static build of the project that can be deployed:
+
+```
+yarn build
+```
+
+The static site is dumped into `/build`, which is not tracked in version control.
+
 Project Structure
 -----------------
 
