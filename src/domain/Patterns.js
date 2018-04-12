@@ -38,7 +38,7 @@ OO........O...O.OO....O.O
 `,
 
   /** 
-   * Pattern for a gosper glider gun.
+   * Pattern for a Gosper Glider Gun.
    * See: http://www.conwaylife.com/w/index.php?title=Gosper_glider_gun 
    */
   gosperGliderGun: function() {
@@ -50,16 +50,42 @@ OO........O...O.OO....O.O
 O
 .O..O
 ...OOO
-  `,
+`,
 
   /**
-   * Pattern for a switch engine.
+   * Pattern for a Switch Engine.
    * See: http://www.conwaylife.com/wiki/Switch_engine
    * 
    * Since this pattern needs space to expand, we offset it 35 spaces within the grid.
    */
   switchEngine: function() {
     return this.fromString(this.switchEngineString, 35)
+  },
+
+  noahsArkString: `
+..........O.O
+.........O
+..........O..O
+............OOO
+.
+.
+.
+.
+.
+.O
+O.O
+.
+O..O
+..OO
+...O
+`,
+
+  /**
+   * Pattern for a Noah's Ark.
+   * See: http://www.conwaylife.com/wiki/Noah%27s_ark
+   */
+  noahsArk: function() {
+    return this.fromString(this.noahsArkString, 70)
   }
 }
 

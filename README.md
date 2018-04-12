@@ -62,6 +62,7 @@ By default, the initial state of the grid is randomized. You can switch to a spe
 
 * Press `g`: switches to a [Gosper Glider Gun](http://www.conwaylife.com/w/index.php?title=Gosper_glider_gun).
 * Press `s`: switches to a [Switch Engine](http://www.conwaylife.com/w/index.php?title=Switch_engine).
+* Press `n`: switches to a [Noah's Ark](http://www.conwaylife.com/wiki/Noah%27s_ark).
 * Press `r`: randomizes the state of the grid.
 
 
