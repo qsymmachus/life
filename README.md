@@ -61,7 +61,9 @@ The Game of Life is a "zero-player game" – once the initial state of the grid 
 By default, the initial state of the grid is randomized. You can switch to a specific pattern by pressing the following keys:
 
 * Press `g`: switches to a [Gosper Glider Gun](http://www.conwaylife.com/w/index.php?title=Gosper_glider_gun).
+* Press `s`: switches to a [Switch Engine](http://www.conwaylife.com/w/index.php?title=Switch_engine).
 * Press `r`: randomizes the state of the grid.
+
 
 Project Structure
 -----------------

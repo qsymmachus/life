@@ -15,10 +15,16 @@ class App extends Component {
     setInterval(tick, 500)
   }
 
-  /** Event handler to switch the Grid to the Gosper Glider Gun. */
+  /** Event handler to switch the Grid to a gosper glider gun. */
   switchToGliderGun(event) {
     event.preventDefault()
     switchGridPattern(Patterns.gosperGliderGun())
+  }
+
+  /** Event handler to switch the Grid to a switch engine. */
+  switchToSwitchEngine(event) {
+    event.preventDefault()
+    switchGridPattern(Patterns.switchEngine())
   }
 
   /** Event handler to randomize the Grid. */
@@ -31,8 +37,9 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div className="app">
-          <KeyHandler keyEventName={KEYPRESS} keyValue="g" onKeyHandle={this.switchToGliderGun} />
           <KeyHandler keyEventName={KEYPRESS} keyValue="r" onKeyHandle={this.randomizeGrid} />
+          <KeyHandler keyEventName={KEYPRESS} keyValue="g" onKeyHandle={this.switchToGliderGun} />
+          <KeyHandler keyEventName={KEYPRESS} keyValue="s" onKeyHandle={this.switchToSwitchEngine} />
           <GridContainer />
         </div>
       </Provider>

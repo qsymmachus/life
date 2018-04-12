@@ -43,6 +43,21 @@ OO........O...O.OO....O.O
    */
   gosperGliderGun: function() {
     return this.fromString(this.gosperGliderGunString)
+  },
+
+  switchEngineString: `
+.O.O
+O
+.O..O
+...OOO
+  `,
+
+  /**
+   * Pattern for a switch engine.
+   * See: http://www.conwaylife.com/wiki/Switch_engine
+   */
+  switchEngine: function() {
+    return this.fromString(this.switchEngineString)
   }
 }
 
