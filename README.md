@@ -56,7 +56,7 @@ The static site is dumped into `/build`, which is not tracked in version control
 Playing the Game of Life
 ------------------------
 
-The Game of Life is a "zero player game" – once the initial state of the grid is set, the game "plays" itself. However, we can change the initial state of the grid to prompt some interesting behaviors. 
+The Game of Life is a "zero-player game" – once the initial state of the grid is set, the game "plays" itself. However, we can change the initial state of the grid to prompt some interesting behaviors. 
 
 By default, the initial state of the grid is randomized. You can switch to a specific pattern by pressing the following keys:
 
