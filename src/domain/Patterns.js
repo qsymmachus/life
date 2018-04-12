@@ -13,7 +13,7 @@ import { padBooleanArray } from './helpers/Padder'
  */
 let Patterns = {
   /** Given a plaintext pattern string, converts it to a two-dimensional array of booleans. */
-  fromString: function(patternString) {
+  fromString: function(patternString, offset=0) {
     let patternArray = patternString
       .split("\n")
       .filter((line) => line !== '')
@@ -21,7 +21,7 @@ let Patterns = {
         line.split('').map((char) => char === 'O' ? true : false)
       )
       
-    return padBooleanArray(patternArray)
+    return padBooleanArray(patternArray, 100, 100, offset)
   },
 
   /** Pattern string for a gosper glider gun. */
@@ -55,9 +55,11 @@ O
   /**
    * Pattern for a switch engine.
    * See: http://www.conwaylife.com/wiki/Switch_engine
+   * 
+   * Since this pattern needs space to expand, we offset it 35 spaces within the grid.
    */
   switchEngine: function() {
-    return this.fromString(this.switchEngineString)
+    return this.fromString(this.switchEngineString, 35)
   }
 }
 
