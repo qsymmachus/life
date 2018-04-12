@@ -28,6 +28,9 @@ class Grid {
 
   /**
    * Returns the neighbors of a given Cell on the grid.
+   * 
+   * For the game of life, we use the Moore neigborhood.
+   * See: https://en.wikipedia.org/wiki/Moore_neighborhood
    */
   getNeighbors(cell) {
     let neighboringPositions = [
