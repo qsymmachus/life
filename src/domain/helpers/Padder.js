@@ -3,7 +3,7 @@ import { range } from './Range'
 /**
  * Given a two-dimensional boolean array, pads the array to a given height and width.
  * 
- * For example, assuming we are using a height and width of 100, agiven the following boolean array:
+ * For example, assuming we are using a height and width of 100, and given the following boolean array:
  * 
  *   [
  *     [false, true, false],
