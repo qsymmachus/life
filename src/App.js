@@ -12,7 +12,7 @@ import './App.css'
 class App extends Component {
   componentWillMount() {
     /** Automatically 'tick' the Game of Life every second once the App renders. */
-    setInterval(tick, 500)
+    setInterval(tick, 100)
   }
 
   /** Event handler to switch the Grid to a Gosper Glider Gun. */
