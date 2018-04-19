@@ -5,15 +5,19 @@ import './Cell.css'
 
 /** Renders a cell in the game of life. A cell can either be alive or dead. */
 class CellComponent extends Component {
-  get style() {
-    return {
-      backgroundColor: this.props.cell.isAlive ? "black" : "white"
+  get class() {
+    let className = "cell"
+
+    if (this.props.cell.isAlive) {
+      className += " alive"
     }
+
+    return className
   }
 
   render() {
     return (
-      <div className="cell" style={ this.style }>
+      <div className={ this.class }>
       </div>
     )
   }

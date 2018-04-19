@@ -3,4 +3,9 @@
   height: 5px;
   display: inline-block;
   vertical-align: top;
+  background-color: white;
+}
+
+.alive {
+  background-color: black;
 }
